@@ -1,0 +1,18 @@
+###
+POST https://api.jmxhyz.site/api/register 
+Content-Type: application/json
+
+{
+    "username": "SB",
+    "password": "114514!"7
+}
+
+###
+
+POST https://api.jmxhyz.site/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "password": "Test123!"
+}

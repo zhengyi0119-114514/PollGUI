@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace PollGUI.Views;
+namespace PollMVVM.Views;
 
 public partial class MainWindow : Window
 {

@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "name": "C#: PullGUI.Desktop Debug",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/<relative-path-to-project-folder>PullGUI.Desktop.csproj"
+        }
+    ]
+}

@@ -4,10 +4,10 @@ using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using System.Linq;
 using Avalonia.Markup.Xaml;
-using PollGUI.ViewModels;
-using PollGUI.Views;
+using PollMVVM.ViewModels;
+using PollMVVM.Views;
 
-namespace PollGUI;
+namespace PollMVVM;
 
 public partial class App : Application
 {
@@ -25,14 +25,7 @@ public partial class App : Application
             DisableAvaloniaDataAnnotationValidation();
             desktop.MainWindow = new MainWindow
             {
-                DataContext = new MainViewModel()
-            };
-        }
-        else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
-        {
-            singleViewPlatform.MainView = new MainView
-            {
-                DataContext = new MainViewModel()
+                DataContext = new MainWindowViewModel(),
             };
         }
 

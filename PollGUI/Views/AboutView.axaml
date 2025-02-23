@@ -1,8 +1,14 @@
-﻿<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="PollGUI.Views.AboutView">
-    Welcome to Avalonia!
+﻿<UserControl
+    x:Class="PollGUI.Views.AboutView"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:PollGUI.ViewModels"
+    d:DesignHeight="300"
+    d:DesignWidth="500"
+    mc:Ignorable="d">
+    <Panel>
+        <TextBox Text="在GitHub上访问：https://github.com/zhengyi0119-114514/PollGUI" IsReadOnly="True" />
+    </Panel>
 </UserControl>

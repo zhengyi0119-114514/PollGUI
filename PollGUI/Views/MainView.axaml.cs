@@ -19,5 +19,8 @@ public partial class MainView : UserControl
             await task;
         }
     }
-
+    public void AboutAppMenuClick(object sender, RoutedEventArgs args)
+    {
+        new AboutWindow().Show();
+    }
 }

@@ -19,14 +19,17 @@
         </Grid.RowDefinitions>
         <Menu Grid.Row="0">
             <MenuItem Width="100" Header="账户">
+                <MenuItem Width="200" Header="注册并登陆" />
+                <MenuItem Width="200" Header="登陆" />
                 <MenuItem Width="200" Header="我的">
-                    <MenuItem Width="200" Header="主页" />
+                    <MenuItem Width="200" Header="主页" IsEnabled="{Binding Path=IsLogin,Mode=TwoWay}" />
                 </MenuItem>
             </MenuItem>
             <MenuItem Width="100" Header="关于">
-                <MenuItem Width="200" Header="应用" />
-                <MenuItem Width="200" Header="服务" Click="AboutServiceClick"/>
+                <MenuItem Width="200" Header="应用" Click="AboutAppMenuClick" />
+                <MenuItem Width="200" Header="服务" Click="AboutServiceClick" />
             </MenuItem>
         </Menu>
+        
     </Grid>
 </UserControl>

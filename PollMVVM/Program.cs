@@ -1,7 +1,7 @@
-﻿using System;
-using Avalonia;
+﻿using Avalonia;
+using System;
 
-namespace PollGUI.Desktop;
+namespace PollMVVM;
 
 sealed class Program
 {

@@ -14,22 +14,47 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
             <RowDefinition Height="1*" />
-            <RowDefinition Height="9*" />
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="5*" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
-        <Menu Grid.Row="0">
-            <MenuItem Width="100" Header="账户">
-                <MenuItem Width="200" Header="注册并登陆" />
-                <MenuItem Width="200" Header="登陆" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Grid.ColumnSpan="4">
+            <MenuItem Width="150" Header="账户">
+                <MenuItem Width="200" Header="注册并登陆" Name="RegisterMenu" />
+                <MenuItem Width="200" Header="登陆" Name="LoginMenu" />
                 <MenuItem Width="200" Header="我的">
-                    <MenuItem Width="200" Header="主页" IsEnabled="{Binding Path=IsLogin,Mode=TwoWay}" />
+                    <MenuItem Width="200" Header="主页" 
+                              IsEnabled="{Binding Path=IsLogin,Mode=TwoWay}" Name="AccountMenuItem"/>
+                  <MenuItem Width="200" Header="退出登录" IsEnabled="{Binding Path=IsLogin}"/>
                 </MenuItem>
             </MenuItem>
-            <MenuItem Width="100" Header="关于">
+            <MenuItem Width="150" Header="关于">
                 <MenuItem Width="200" Header="应用" Click="AboutAppMenuClick" />
+                <MenuItem Width="200" Header="网页端" Click="AboutWebClick" />
                 <MenuItem Width="200" Header="服务" Click="AboutServiceClick" />
             </MenuItem>
         </Menu>
-        
+        <Border Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
+            Margin="5,5,5,5" Background="AliceBlue">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="文化答题系统" HorizontalAlignment="Center"
+                    FontSize="40" />
+                <TextBlock Grid.Row="1" Text="探索粤港澳文化" HorizontalAlignment="Center" />
+            </Grid>
+        </Border>
+        <Button
+            Grid.Row="3" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+            Margin="5,5,5,5" Content="开始答题" Name="StartButton" IsEnabled="{Binding Path=IsLogin}" />
     </Grid>
 </UserControl>

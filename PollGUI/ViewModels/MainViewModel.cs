@@ -13,7 +13,11 @@ public partial class MainViewModel : ViewModelBase
 {
     public MainViewModel()
     {
-        // Login = new Command
+        Static.OnInfoChange += (s,e)=>{
+            this.AccountInfo = Static.Info;
+            OnPropertyChanged(nameof(AccountInfo));
+            OnPropertyChanged(nameof(IsLogin));
+        };
     }
     private AccountInfo m_AccountInfo = new("SB");
     public AccountInfo AccountInfo
@@ -31,8 +35,4 @@ public partial class MainViewModel : ViewModelBase
         get { return m_AccountInfo.Token != null; }
         set { }
     }
-    
-    public ICommand Login { get; init; }
-    public ICommand Logout { get; init;}
-    public ICommand Register { get; init; }
 }

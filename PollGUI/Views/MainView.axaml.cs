@@ -19,8 +19,17 @@ public partial class MainView : UserControl
             await task;
         }
     }
-    public void AboutAppMenuClick(object sender, RoutedEventArgs args)
+    private void AboutAppMenuClick(object sender, RoutedEventArgs args)
     {
         new AboutWindow().Show();
+    }
+    private async void AboutWebClick(Object s,RoutedEventArgs e)
+    {
+        var launcher = TopLevel.GetTopLevel(this)?.Launcher;
+        var task = launcher?.LaunchUriAsync(new("https://demo.jmxhyz.site/"));
+        if (task != null)
+        {
+            await task;
+        }
     }
 }

@@ -9,14 +9,39 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="50"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
+          <ColumnDefinition Width="2*"/>
+          <ColumnDefinition Width="1*"/>
+          <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="50"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="auto"/>
+          <RowDefinition Height="1*"/>
+          <RowDefinition Height="1*"/>
+          <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="0" Grid.Column="2" Text="{Binding Name}"/>
+      <!--
+      -->
+      <Border Background="AliceBlue" CornerRadius="10,10,10,10"
+              Grid.Row="0" Grid.Column="1" Margin="5,50,10,10"
+              HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <TextBox IsReadOnly="True" Text="{Binding Path=Id,StringFormat='id:{0}'}"
+                 CornerRadius="10,10,10,10"/>
+      </Border>
+      <Border Background="AliceBlue" Margin="10,50,10,10" CornerRadius="10,10,10,10"
+              Grid.Row="0" Grid.Column="2" BorderBrush="Black" BorderThickness="1">
+        <StackPanel>
+          <Label Content="正确✔" HorizontalAlignment="Center" FontSize="30"/>
+          <Label Content="{Binding Path=CorrectAnwers}" 
+                 FontSize="25" HorizontalAlignment="Center"/>
+        </StackPanel>
+      </Border>
+      <Border Background="AliceBlue" Grid.Row="0" Grid.Column="3" Margin="10,50,10,10"
+              BorderBrush="Black" BorderThickness="1" CornerRadius="10,10,10,10">
+        <StackPanel>
+          <Label Content="错误×" HorizontalAlignment="Center" FontSize="30"/>
+          <Label Content="{Binding Path=WrongAnwers}" FontSize="25" HorizontalAlignment="Center"/>
+        </StackPanel>
+      </Border>
+
     </Grid>
 </UserControl>

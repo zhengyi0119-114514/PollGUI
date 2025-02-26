@@ -8,6 +8,7 @@ public enum AccountExceptionType
     NotFound = 1,
     Exist = 2,
     Network = 3,
+    Token =4
 }
 public class AccountException : Exception
 {

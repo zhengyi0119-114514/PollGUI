@@ -13,6 +13,11 @@ POST https://api.jmxhyz.site/api/login HTTP/1.1
 Content-Type: application/json
 
 {
-    "username": "testuser",
-    "password": "Test123!"
+    "username": "SB",
+    "password": "114514"
 }
+###
+GET https://api.jmxhyz.site/api/questions HTTP/1.1
+###
+GET https://api.jmxhyz.site/api/user/profile HTTP/1.1
+Authorization : Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ5b3VyX2RvbWFpbi5jb20iLCJzdWIiOjE4LCJpYXQiOjE3NDA1MDE1NzgsImV4cCI6MTc0MDUwNTE3OCwiYWRtaW4iOmZhbHNlfQ.kq5M3ScLw8GrsonhgEqLJNwv-l0dQOB_JB-u2tQvlGbvJlnvu6Q_TnI7HfBAZoKyHT63v2xmg9jjVJI5DjqToA

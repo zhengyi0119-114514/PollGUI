@@ -7,7 +7,9 @@
     xmlns:views="clr-namespace:PollGUI.Views"
     Title="AboutWindow"
     d:DesignHeight="300"
+    Height="300"
     d:DesignWidth="500"
+    Width="500"
     mc:Ignorable="d">
     <views:AboutView/>
 </Window>

@@ -1,0 +1,41 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+    x:Class="PollGUI.Views.RegisterView">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="9*" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Label Content="用户名："
+            Grid.Row="1" Grid.Column="1" />
+        <TextBox Watermark="UserName" Name="UserNameTextBox"
+            Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" />
+        <Label Content="密码："
+            Grid.Row="2" Grid.Column="1" />
+        <TextBox Watermark="Password" PasswordChar="米" Name="PasswordTextBox"
+            Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" />
+        <Label Content="重复密码:"
+            Grid.Row="3" Grid.Column="1" />
+        <TextBox Watermark="Password" PasswordChar="*" Name="PasswordTextBox2"
+            Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3" />
+        <Button Content="OK" Grid.Row="4" Grid.Column="3" Name="OkButton"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+        <Button Content="Clear" Grid.Row="4" Grid.Column="4" Name="ClearButton"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+    </Grid>
+</UserControl>
